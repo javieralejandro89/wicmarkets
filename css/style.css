@@ -153,15 +153,23 @@ body {
 /* Columna derecha (formulario) */
 /* HERO FORMULARIO TRANSPARENTE */
 .hero-form {
-  flex: 1 1 40%;
+  flex: 1 1 45%;
   max-width: 40%;
-  padding: 15px;
-  border-radius: 10px;
+  padding: 30px;
+  border-radius: 12px;
   color: white;
-  background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.05); /* transparente pero visible */
+  backdrop-filter: blur(5px); /* efecto de vidrio */
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.4),     /* sombra profunda inferior */
+    0 4px 8px rgba(0, 0, 0, 0.3) inset; /* relieve interno */
+  transition: all 0.3s ease;
+}
+.hero-form:hover {
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.5),
+    0 4px 8px rgba(255, 255, 255, 0.1) inset;
+  transform: translateY(-4px);
 }
 
 
