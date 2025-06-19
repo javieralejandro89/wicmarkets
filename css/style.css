@@ -291,7 +291,8 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #003a8c;
+  background-color: #016be6;
+  transform: scale(1.05);
 }
 
 
@@ -542,7 +543,10 @@ body {
 }
 
 .note-card:hover {
-  transform: translateY(-6px) scale(1.03);  
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.5),
+    0 4px 8px rgba(19, 19, 19, 0.1) inset;
+  transform: translateY(-4px);  
 }
 
 /* Línea luminosa inferior al hacer hover */
@@ -633,6 +637,32 @@ body {
 
 .amazon-notes-below .note-card {
   flex: 1 1 40%;
+}
+
+.amazon-cta {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-cta {
+  display: inline-block;
+  background-color: #004bad8a;
+  color: white;
+  padding: 14px 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 14px rgba(0, 1, 2, 0.726);
+}
+
+.btn-cta:hover {
+  background-color: #016be6;
+  transform: scale(1.05);
+}
+html {
+  scroll-behavior: smooth;
 }
 
 
