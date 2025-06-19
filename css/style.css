@@ -176,6 +176,7 @@ body {
 .hero-form h2 {
   margin-bottom: 10px;
   font-size: 1.7rem;
+  color: white;
   text-align: center;
 }
 
@@ -310,31 +311,19 @@ body {
   height: 100px;
 }
 
-/* BENEFICIOS E INSTRUMENTOS */
-.benefits,
-.instruments {
-  background-color: #00010c !important;
-  color: white !important;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-
-
 /* SECCIONES GENERALES */
-h2 {
-  font-size: 1.5rem;
-  color: #ffffff;
-  margin-bottom: 20px;
-  font-weight: 700;
+
+.benefits {
+  background-color: #cececebe !important;
+  padding: 80px 5px;
   text-align: center;
 }
-
 
 .benefits h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 10px;
+  color: black;
 }
 
 .section-intro {
@@ -342,7 +331,7 @@ h2 {
   font-size: 1.3rem;
   max-width: 1000px;
   margin: 0 auto 40px;
-  color: #a3a3a3;
+  color: #000000c4;
 }
 
 .benefit-item h3 {
@@ -365,10 +354,17 @@ h2 {
   width: 100%;
 }
 
+.instruments {
+  background-color: #cececebe !important;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
 .instruments h2 {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 10px;
+  color: black;
 }
 
 .instrument-item h3 {
@@ -397,7 +393,7 @@ h2 {
   transform: scale(0.6);
   transition: transform 0.6s ease, opacity 0.6s ease;
   opacity: 0;
-  box-shadow: 0 4px 16px rgba(200, 200, 200, 0.418); /* ✅ sombra clara permanente */
+  box-shadow: 0 4px 16px rgba(15, 15, 15, 0.582); /* ✅ sombra clara permanente */
   display: flex;
   flex-direction: column;
 }
@@ -451,26 +447,194 @@ h2 {
   margin: 0 auto;
 }
 
-/* CÓMO FUNCIONA */
-.how-it-works h2 {
-   font-size: 2rem;
-  margin-bottom: 20px;
-  color: #111;
-  font-weight: 700; 
+.amazon-section {
+  background-color: #0a0b29 !important;
+  color: white !important;
+  padding: 80px 20px;
+  text-align: center;
 }
 
-.how-it-works ol {
+.amazon-flex {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.amazon-carousel {
+  position: relative;
+  width: 100%;
   max-width: 600px;
-  margin: 0 auto 60px auto;
-  padding-left: 20px;
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.8;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: rgba(0, 1, 58, 0.788);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.836),     /* sombra profunda inferior */
+    0 4px 8px rgba(0, 0, 0, 0.3) inset; /* relieve interno */
+  margin: 0 auto;
 }
 
-.how-it-works li {
-  margin-bottom: 15px;
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
 }
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-track img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 10px;
+}
+.carousel-caption-text {
+  margin-top: 14px;
+  font-size: 1rem;
+  text-align: center;
+  color: #e7e7e7;
+  min-height: 40px;
+  transition: opacity 0.4s ease;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #002453dc;
+}
+.amazon-summary {
+  flex: 1 1 40%;
+}
+
+.amazon-summary h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.note-card {
+  background: rgba(255, 255, 255, 0.05); /* fondo translúcido suave */
+  border-radius: 16px;
+  padding: 24px;
+  background-color: rgba(255, 255, 255, 0.05); /* transparente pero visible */
+  backdrop-filter: blur(5px); /* efecto de vidrio */
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.877),     /* sombra profunda inferior */
+    0 4px 8px rgba(0, 0, 0, 0.3) inset; /* relieve interno */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  
+}
+
+.note-card:hover {
+  transform: translateY(-6px) scale(1.03);  
+}
+
+/* Línea luminosa inferior al hacer hover */
+.note-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 100%;
+  height: 3px;
+  border-radius: 60px;
+  background: linear-gradient(to right, #002fff, #0077ff, #00ffff);
+  transition: transform 0.4s ease;
+  transform-origin: center;
+}
+
+.note-card:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.note-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  color: #00d4ff;
+  font-weight: 600;
+}
+
+.note-card ul {
+  padding-left: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.note-card ul li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  color: #eaeaea;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.note-card ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.1rem;
+  color: #00c8ff; /* color moderno: celeste */
+  line-height: 1.5;
+}
+
+.note-card p {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  color: #eaeaea;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+.note-card p::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.1rem;
+  color: #00c8ff; /* color moderno: celeste */
+  line-height: 1.5;
+}
+
+.note-icon {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.amazon-notes-below {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1500px;
+  margin: 0px auto 0;
+  flex-wrap: wrap;
+  background-color: #0a0b29;
+  padding: 60px 20px;
+  border-radius: 20px;
+}
+
+.amazon-notes-below .note-card {
+  flex: 1 1 40%;
+}
+
 
 /* FOOTER */
 .footer {
@@ -480,6 +644,59 @@ h2 {
   padding: 20px 0;
   font-size: 0.9rem;
 }
+.whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+    background-color: #004badec;
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 73, 230, 0.8),
+                0 0 20px rgba(0, 138, 230, 0.4);
+    animation: pulse 1.6s infinite;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.08);
+  }
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 73, 230, 0.6); }
+    70% { box-shadow: 0 0 0 16px rgba(0, 230, 118, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0); }
+  }
+
+  .tooltip-text {
+    background: #333;
+    color: white;    
+    border-radius: 6px;
+    font-size: 0.75rem;
+    margin-top: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .whatsapp-container:hover .tooltip-text {
+    opacity: 1;
+  }
+
 
 @media (max-width: 768px) {
   /* Hero background */
@@ -597,7 +814,7 @@ h2 {
   font-size: 1rem;
   max-width: 1200px;
   margin: 0 auto 40px;
-  color: #a3a3a3;
+  color: #000000d3;
 }
 .instrument-item h3 {
   font-size: 1.5rem;
@@ -628,6 +845,60 @@ h2 {
   max-height: 200px !important;  /* Ya lo habías reducido verticalmente */
   border-radius: 12px;
 }
-  
+
+.amazon-section {
+  max-width: 1500px;
+}
+
+.amazon-notes-below {
+  margin: 0px auto 0;
+}
+
+.amazon-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .amazon-carousel {
+    max-width: 150%;
+  }
+  .carousel-caption-text {
+  margin-bottom: 20px;    
+}
+
+  .carousel-track img {
+    width: 100%;
+    height: auto;
+  }
+
+  .amazon-summary h2 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+
+  .amazon-notes {
+    background: none;
+    padding: 20px 10px;
+  }
+
+  .note-card,
+  .step-2,
+  .step-3 {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .amazon-notes h2 {
+    font-size: 1.5rem;
+  }
+
+ .whatsapp-button[title]::after {
+      content: none !important;
+    }
+  .whatsapp-container {
+    right: auto !important;
+    bottom: auto !important;
+  }
 }
 

@@ -32,6 +32,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.13/build/css/intlTelInput.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -77,14 +79,79 @@
   <!-- SEPARADOR: ONDA HACIA ARRIBA -->
   <div class="wave-separator">
     <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path fill="#00010c"
+      <path fill="#0a0b29"
         d="M0,32L48,42.7C96,53,192,75,288,80C384,85,480,75,576,74.7C672,75,768,85,864,90.7C960,96,1056,96,1152,85.3C1248,75,1344,53,1392,42.7L1440,32V100H0Z">
       </path>
     </svg>
   </div>
 </section>
 
+<section id="amazon-investing" class="amazon-section">
+  <div class="container amazon-flex">
+    
+    <!-- Imagen a la izquierda -->
+  <div class="amazon-carousel">
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <img src="img/amazon-1.jpg" alt="Amazon 1" />
+      <img src="img/amazon-2.jpg" alt="Amazon 2" />
+      <img src="img/amazon-3.jpg" alt="Amazon 3" />
+    </div>
+  </div>
 
+  <div class="carousel-indicators">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <!-- ✅ Comentario dinámico justo debajo -->
+  <p id="carousel-caption" class="carousel-caption-text">
+    Amazon ha crecido más del 300% en la última década.
+  </p>
+</div>
+
+
+  <!-- Columna derecha: Título + primera tarjeta -->
+    <div class="amazon-summary">
+      <h2>Invertir en acciones de Amazon: una oportunidad estratégica</h2>
+
+      <article class="note-card" data-aos="fade-left">
+        <div class="note-icon">✅</div>
+        <h3>Razones para invertir</h3>
+        <ul>
+          <li><strong>Liderazgo global:</strong> Referente en e-commerce y cloud.</li>
+          <li><strong>Innovación:</strong> Invierte en salud e inteligencia artificial.</li>
+          <li><strong>Crecimiento:</strong> Ingresos y beneficios sostenidos.</li>
+          <li><strong>Liquidez:</strong> Compra/venta ágil.</li>
+          <li><strong>Diversificación:</strong> Presencia en múltiples sectores.</li>
+          <li><strong>Expansión:</strong> Sigue creciendo globalmente.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+
+  <!-- Tarjetas debajo en una sola columna -->
+  <div class="container amazon-notes-below">
+    <article class="note-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="note-icon">⚠️</div>
+      <h3>Consideraciones clave</h3>
+      <ul>
+        <li>Volatilidad y competencia pueden afectar resultados.</li>
+        <li>Se requiere análisis fundamental serio.</li>
+        <li>Consulta con un asesor financiero profesional.</li>
+      </ul>
+    </article>
+
+    <article class="note-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="note-icon">💡</div>
+      <h3>Conclusión</h3>
+      <p>
+        Amazon es una opción sólida para inversores con visión a largo plazo, siempre que se tomen decisiones informadas y conscientes de los riesgos.
+      </p>
+    </article>
+  </div>
+</section>
 
   <!-- BENEFICIOS -->
   <section class="benefits">
@@ -164,16 +231,19 @@
 </section>
 
 
-  <!-- CÓMO FUNCIONA -->
-  <section id="how-it-works" class="how-it-works container">
-    <h2>¿Cómo funciona?</h2>
-    <ol>
-      <li>Regístrate y verifica tu cuenta</li>
-      <li>Selecciona el instrumento que quieres operar</li>
-      <li>Realiza tu primera operación con nuestro soporte</li>
-      <li>Monitorea tus inversiones y recibe reportes</li>
-    </ol>
-  </section>
+  
+
+  <!-- Botón flotante de WhatsApp con tooltip -->
+   
+<div class="whatsapp-container">
+  <a href="https://wa.me/529985780385?text=Hola%20me%20interesa%20DigitalizaTuNegocio" 
+     class="whatsapp-float" 
+     target="_blank" 
+     aria-label="WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+  <span class="tooltip-text">¡Contáctanos!</span>
+</div>
 
     <!-- FOOTER -->
   <footer class="footer">
@@ -186,6 +256,11 @@
   <script src="js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.13/build/js/intlTelInput.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.13/build/js/utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
  
   
 </body>
