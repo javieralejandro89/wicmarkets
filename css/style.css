@@ -62,14 +62,14 @@ body {
 }
 
 .logo-img {
-  height: 38px;
-  width: 38px;
-  object-fit: contain;
-  filter: brightness(1.1);
-  margin-right: 12px;
-
-  /* ✅ NUEVO: sombra clara en forma de cuadrado */
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.993);
+  width: 50px;
+  height: 50px;
+  padding: 6px;
+  border: 1.5px solid rgba(255, 255, 255, 0.24); /* marco sutil */
+  border-radius: 8px; /* opcional: si quieres esquinas redondeadas, o pon 0 para cuadrado */
+  background-color: rgba(255, 255, 255, 0.158);
+  box-sizing: border-box;
+  margin-right: 20px;
 }
 
 
@@ -667,12 +667,97 @@ html {
 
 
 /* FOOTER */
-.footer {
-  background: #0a0b29;
-  color: white;
+.site-footer {
+  background-color: #0a0b29;
+  color: #fff;
+  padding: 60px 20px 30px;
+  font-size: 0.95rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  flex: 1 1 30%;
+}
+.footer-left p{
+  margin-right: 120px;
+}
+
+.footer-logo {
+  width: 50px;
+  height: 50px;
+  padding: 6px;
+  border: 1.5px solid rgba(255, 255, 255, 0.24); /* marco sutil */
+  border-radius: 8px; /* opcional: si quieres esquinas redondeadas, o pon 0 para cuadrado */
+  background-color: rgba(255, 255, 255, 0.158);
+  box-sizing: border-box;
+}
+
+.footer-left h3 {
+  margin-top: 0;
+  font-size: 1.3rem;  
+}
+
+.footer-right {
+  flex: 1 1 10%;
+}
+
+.footer-right h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.footer-right i {
+  margin-right: 8px;
+  color: #ccc;
+  width: 20px;
   text-align: center;
-  padding: 20px 0;
+}
+
+.footer-right p {
+  margin-bottom: 10px;
+  color: #eee;
+  text-decoration: none;
+}
+
+.footer-divider {
+  margin: 30px auto;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 1200px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
   font-size: 0.9rem;
+}
+
+.footer-links a {
+  color: #ccc;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.footer-logo:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
 }
 .whatsapp-container {
     position: fixed;
@@ -809,14 +894,14 @@ html {
   }
 
   .logo-img {
-    width: 28px;
-    height: 28px;
-    margin-right: 8px;
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
   }
 
   .flag-icon img {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
   }
 
   /* Navegación e instrumentos */
@@ -929,6 +1014,12 @@ width: 100%;
   .whatsapp-container {
     right: auto !important;
     bottom: auto !important;
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    align-items: flex-start;
+    display: flex;
   }
 }
 
