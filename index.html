@@ -63,7 +63,14 @@
     <!-- Columna derecha (formulario) -->
     <div class="hero-form">
       <h2>Completa el formulario ahora</h2>
-      <form>
+      <form action="https://formsubmit.co/wicmarkets@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Nuevo lead desde el sitio WICMarkets">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="box">
+      <input type="hidden" name="_autoresponse" value="Gracias por tu mensaje. Te responderemos pronto.">
+      <input type="hidden" name="_next" value="https://tusitio.com/gracias.html">
+
+
         <input type="text" placeholder="Nombre" required />
         <input type="text" placeholder="Apellido" required />
         <input type="email" placeholder="Email" required />
@@ -239,7 +246,7 @@
   <!-- Botón flotante de WhatsApp con tooltip -->
    
 <div class="whatsapp-container">
-  <a href="https://wa.me/529985780385?text=Hola%20me%20interesa%20DigitalizaTuNegocio" 
+  <a href="https://wa.me/525545170518?text=Hola,%20estoy%20interesado%20en%20obtener%20más%20información%20sobre%20cómo%20invertir%20con%20WICMarkets.%20¿Me%20podrías%20ayudar,%20por%20favor?" 
      class="whatsapp-float" 
      target="_blank" 
      aria-label="WhatsApp">
@@ -247,6 +254,61 @@
   </a>
   <span class="tooltip-text">¡Contáctanos!</span>
 </div>
+<section class="payment-methods">
+  <div class="container">
+    <h3 class="payment-title">Métodos de pago disponibles</h3>
+    <div class="payment-logos">
+      <img src="img/pagos/oxxo.svg" alt="OXXO">
+      <img src="img/pagos/bbva-bancomer.svg" alt="BBVA">
+      <img src="img/pagos/7eleven.svg" alt="7eleven">
+      <img src="img/pagos/calimax.png" alt="Calimax">
+      <img src="img/pagos/banorte.svg" alt="Banorte">
+      <img src="img/pagos/banco-azteca.svg" alt="Azteca">
+      <img src="img/pagos/soriana.svg" alt="Soriana">
+      <img src="img/pagos/santa-maria.png" alt="Santa-Maria">
+      <img src="img/pagos/scotiabank.svg" alt="Scotiabank">
+      <img src="img/pagos/farmaciadrahorro.svg" alt="FarmaciasAhorro">
+      <img src="img/pagos/bodega-aurrera.svg" alt="BodegaAurera">
+      <img src="img/pagos/wallmart.svg" alt="Wallmart">
+      <img src="img/pagos/circlek.png" alt="Circlek">
+      <img src="img/pagos/sams-club.svg" alt="SamsClub">
+      <img src="img/pagos/superama.svg" alt="Superama">
+      <img src="img/pagos/spei.svg" alt="Spei">
+      <!-- Agrega más según tengas -->
+    </div>
+  </div>
+</section>
+<section class="wallet-section">
+  <div class="container wallet-flex">    
+    <!-- Columna izquierda: descripción -->
+    <div class="wallet-info">
+      <h2>Depósitos y retiros</h2>
+      <div class="wallet-logos">
+      <img src="img/billeteras/visa.svg" alt="Visa">
+      <img src="img/billeteras/mastercard.svg" alt="Mastercard">
+      <img src="img/billeteras/amex.svg" alt="Amex">
+      <img src="img/billeteras/bank-wire.svg" alt="BankWire">
+      <img src="img/billeteras/crypto.svg" alt="Cripto">
+      <img src="img/billeteras/binance.svg" alt="Binance">
+      <!-- Agrega más billeteras si las tienes -->
+    </div>
+    </div>
+
+    <!-- Línea divisora vertical -->
+    <div class="wallet-divider"></div>
+    
+    <div class="wallet-info">
+      <h2>Seguridad</h2>
+    <!-- Columna derecha: íconos -->
+    <div class="wallet-logos">
+      <img src="img/billeteras/refinitiv.svg" alt="Refinity">
+      <img src="img/billeteras/comodo.svg" alt="Comodo">
+      <img src="img/billeteras/bexon.svg" alt="Bexon">    
+    </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- FOOTER -->
   <footer class="site-footer">
@@ -260,25 +322,33 @@
       <p>Licencia FSA SD141</p>
     </div>
 
-    <div class="footer-right">
+  <div class="footer-right">
   <h4>Contacto</h4>
-  <p><i class="fa-solid fa-phone"></i> mx +52 55 3850 5410</p>
-  <p><i class="fa-brands fa-whatsapp"></i> WhatsApp</p>
-  <p><i class="fa-regular fa-envelope"></i> support@traderstrust.com</p>
+  <p><a href="tel:+525545170518" class="contact-link">
+      <i class="fa-solid fa-phone"></i> mx +52 55 4517 0518
+    </a>
+  </p>
+
+  <p><a href="https://wa.me/525545170518" target="_blank" rel="noopener" class="contact-link">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+    </a>
+  </p>
+  <p><i class="fa-regular fa-envelope"></i> wicmarkets@gmail.com</p>
   <p><i class="fa-solid fa-location-dot"></i> México</p>
 </div>
-  </div>
+</div>
 
   <hr class="footer-divider" />
 
   <div class="footer-bottom">
-    <p class="copyright">© 2025 WICMarkets. Todos los derechos reservados.</p>
+    <p class="copyright">© 2025 WICMarkets. Todos los derechos reservados.</p> 
     <div class="footer-links">
-      <a href="#">Términos y Condiciones</a>
-      <a href="#">Política de Privacidad</a>
-      <a href="#">Política de Riesgo</a>
-    </div>
+    <a href="#">Términos y Condiciones</a>
+    <a href="#">Política de Privacidad</a>
+    <a href="#">Política de Riesgo</a>
+    </div>   
   </div>
+  
 </footer>
 
   <script src="js/form-validation.js"></script>

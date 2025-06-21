@@ -665,6 +665,103 @@ html {
   scroll-behavior: smooth;
 }
 
+/*Metodos de pago*/
+
+.payment-methods {
+  background-color: #fffffff6;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.payment-title {
+  color: rgba(0, 0, 0, 0.753);
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+
+.payment-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;  
+}
+
+.payment-logos img {
+  height: 30px;              /* Altura uniforme para todos */
+  width: auto;               /* Ancho automático para mantener proporción */
+  object-fit: contain;       /* Ajusta la imagen sin recortarla */
+  display: block;
+  padding: 4px;                   /* Asegura que todos tengan algo de aire */
+  background-color: #fffffff6;       /* Opcional: para unificar fondo */
+  border-radius: 8px;
+  filter: brightness(1.1);
+  transition: transform 0.3s ease;
+}
+
+
+.payment-logos img:hover {
+  transform: scale(1.1);
+}
+.wallet-section {
+  background-color: whitesmoke;
+  color: rgba(0, 0, 0, 0.904);
+  padding: 10px 10px;
+}
+
+.wallet-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Columna izquierda (más ancha) */
+.wallet-info:first-of-type {
+  flex: 2;
+}
+
+/* Columna derecha (más estrecha) */
+.wallet-info:last-of-type {
+  flex: 1;
+}
+
+.wallet-info h2 {
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 16px;
+  color: rgba(22, 22, 22, 0.781);
+}
+
+.wallet-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.wallet-logos img {
+  height: 35px;              /* Altura uniforme para todos */
+  width: auto;               /* Ancho automático para mantener proporción */
+  object-fit: contain;       /* Ajusta la imagen sin recortarla */
+  display: block;
+  filter: brightness(1.1);
+  transition: transform 0.3s ease;
+}
+
+.wallet-logos img:hover {
+  transform: scale(1.1);
+}
+
+.wallet-divider {
+  width: 1px; 
+  height: 80px;
+  background-color: rgba(22, 22, 22, 0.644);  
+}
+
+
 
 /* FOOTER */
 .site-footer {
@@ -731,6 +828,19 @@ html {
   border: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   max-width: 1200px;
+}
+.contact-link {
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-link:hover {
+  transform: translateY(-3px) scale(1.03);
+  color: #00ffa6; /* o el color que desees al hacer hover */
 }
 
 .footer-bottom {
@@ -1008,6 +1118,32 @@ width: 100%;
     font-size: 1.1rem;
 }
 
+.payment-methods{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.payment-logos{
+  width: 100%; 
+}
+.wallet-section{
+  width: 100%;
+}
+.wallet-flex {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .wallet-divider {
+    display: none;
+  }
+
+  .wallet-info,
+  .wallet-logos {
+    width: 100%;
+    text-align: center;
+  }
 .whatsapp-button[title]::after {
       content: none !important;
     }
@@ -1015,11 +1151,14 @@ width: 100%;
     right: auto !important;
     bottom: auto !important;
   }
-  
+
   .footer-links {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column;    
     display: flex;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 }
 

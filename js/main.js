@@ -170,6 +170,34 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", updateCarousel);
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if (response.ok) {
+        alert("✅ Tus datos han sido enviados correctamente.");
+        form.reset(); // Limpia el formulario
+      } else {
+        alert("❌ Hubo un error al enviar tus datos. Intenta nuevamente.");
+      }
+    })
+    .catch(error => {
+      alert("❌ Error en la conexión. Intenta más tarde.");
+    });
+  });
+});
 
 
 
